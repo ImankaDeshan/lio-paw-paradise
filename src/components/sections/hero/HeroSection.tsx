@@ -64,7 +64,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="hero-wrapper relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-forest-ink"
+      className="hero-wrapper relative h-[100svh] min-h-[720px] w-full overflow-hidden bg-forest-ink sm:min-h-[640px]"
       aria-roledescription="carousel"
       aria-label="Serendib Paws Retreat highlights"
     >
@@ -82,7 +82,7 @@ export default function HeroSection() {
 
       {/* Content & Feature Badges Layer */}
       <div className="hero-content-layer relative z-10 flex h-full items-end">
-        <div className="container-page w-full pb-28 pt-40 sm:pb-32">
+        <div className="container-page w-full pb-24 pt-32 sm:pb-32 sm:pt-40">
           <div className="max-w-2xl">
             {slides.map((slide, i) => (
               <HeroContent

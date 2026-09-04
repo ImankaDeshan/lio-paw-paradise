@@ -11,11 +11,11 @@ const defaultBadges: [string, string][] = [
 
 export default function HeroBadges({ badges = defaultBadges }: HeroBadgesProps) {
   return (
-    <div className="mt-14 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+    <div className="mt-10 grid max-w-3xl grid-cols-2 gap-2.5 sm:mt-14 sm:grid-cols-4 sm:gap-3">
       {badges.map(([title, desc], i) => (
-        <div key={i} className="glass-card px-4 py-3.5">
+        <div key={i} className="glass-card min-w-0 px-3 py-3 sm:px-4 sm:py-3.5">
           <p className="text-[13px] font-semibold text-cream">{title}</p>
-          <p className="mt-0.5 text-[11.5px] leading-snug text-cream/60">{desc}</p>
+          <p className="mt-0.5 text-[11px] leading-snug text-cream/60 sm:text-[11.5px]">{desc}</p>
         </div>
       ))}
     </div>
