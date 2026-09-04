@@ -1,0 +1,42 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="scTitle">
+  <title id="scTitle">Serendib Paws Retreat illustration</title>
+  <defs><linearGradient id="scsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B6653"/>
+      <stop offset="100%" stop-color="#122019"/>
+    </linearGradient>
+    <radialGradient id="scvignette" cx="50%" cy="40%" r="75%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.28"/>
+    </radialGradient></defs>
+  
+    <rect width="1600" height="1000" fill="url(#scsky)"/>
+    <circle cx="300" cy="200" r="100" fill="#E8C57F" opacity="0.55"/>
+    <path d="M 1338.7357596988577,760 Q 1338.7357596988577,760 1206.8700393287118,859.0015548250836 Q 1075.0043189585658,958.0031096501673 937.5021594792829,971.3157124394568 Q 800,984.6283152287464 629.7184404174257,994.9168805138268 Q 459.4368808348512,1005.2054457989071 372.29626761533183,882.6027228994535 Q 285.15565439581246,760 423.55764867491996,674.30547146345 Q 561.9596429540275,588.6109429268998 680.9798214770137,548.5409616121219 Q 799.9999999999999,508.4709802973439 985.3595995347682,500.7765784836387 Q 1170.7191990695367,493.0821766699335 1254.727479384197,626.5410883349667 Z" fill="#0F1B16" opacity="0.85"/>
+    <g transform="translate(1480 700) rotate(40) scale(3.4)" opacity="0.7">
+    <path d="M0,0 C 18,-4 34,-16 40,-38 C 14,-34 -2,-18 0,0 Z" fill="#F5E8D0"/>
+    <path d="M2,-2 C 14,-8 24,-18 30,-32" stroke="#FAFAF7" stroke-opacity="0.35" stroke-width="1.4" fill="none"/>
+  </g>
+    <g transform="translate(660 560)">
+      <path d="M -30,220 C -40,140 -30,60 10,20 C 40,-10 90,-8 100,30 C 108,60 90,80 70,86
+               C 90,110 92,160 70,220 Z" fill="#F5E8D0" opacity="0.92"/>
+      <circle cx="40" cy="-30" r="34" fill="#F5E8D0" opacity="0.92"/>
+    </g>
+    <g transform="translate(920 800) scale(-4.6 4.6)">
+    <path d="M -30,10 C -34,-6 -26,-22 -10,-28 C 6,-34 24,-30 30,-16 C 34,-6 32,6 26,14
+             C 30,18 34,26 30,34 C 26,40 16,40 12,32 C 4,36 -8,36 -16,30
+             C -22,36 -32,34 -34,26 C -36,18 -30,12 -30,10 Z" fill="#E8C57F"/>
+    <path d="M 14,-30 C 18,-40 30,-42 34,-34 C 36,-28 30,-22 24,-22 Z" fill="#E8C57F"/>
+    <path d="M -6,-30 C -4,-40 6,-44 10,-36 C 12,-30 6,-24 0,-25 Z" fill="#E8C57F"/>
+    <circle cx="27" cy="-16" r="1.6" fill="#FAFAF7"/>
+    <path d="M 33,-10 C 38,-8 38,-2 33,0" stroke="#E8C57F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+    <g transform="translate(1150 900) rotate(15) scale(1)" fill="#F5E8D0" opacity="0.35">
+    <ellipse cx="0" cy="6" rx="7" ry="8.5"/>
+    <ellipse cx="-9" cy="-6" rx="3.4" ry="4.4"/>
+    <ellipse cx="-3.2" cy="-11" rx="3.2" ry="4.2"/>
+    <ellipse cx="3.2" cy="-11" rx="3.2" ry="4.2"/>
+    <ellipse cx="9" cy="-6" rx="3.4" ry="4.4"/>
+  </g>
+    <rect width="1600" height="1000" fill="url(#scvignette)"/>
+  
+</svg>
