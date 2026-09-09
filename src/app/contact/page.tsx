@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     absolute: "Contact & Book Dog Boarding | Lio's Paw Paradise Sri Lanka",
   },
   description:
-    "Contact Lio's Paw Paradise directly via WhatsApp (+94 71 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
+    "Contact Lio's Paw Paradise directly via WhatsApp (+94 75 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
   alternates: {
     canonical: "https://liospawparadise.com/contact",
   },
   openGraph: {
     title: "Contact & Book Dog Boarding | Lio's Paw Paradise Sri Lanka",
     description:
-      "Contact Lio's Paw Paradise directly via WhatsApp (+94 71 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
+      "Contact Lio's Paw Paradise directly via WhatsApp (+94 75 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
     url: "https://liospawparadise.com/contact",
     siteName: business.name,
     images: [

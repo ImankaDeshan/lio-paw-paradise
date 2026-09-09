@@ -10,8 +10,8 @@ Built with **Next.js 16 (App Router) + TypeScript + Tailwind CSS**.
 
 - **Business Name:** Lio's Paw Paradise
 - **Location:** No. 75, Piyamis, Dikkumbura, Ahangama, Sri Lanka
-- **Primary Phone / WhatsApp:** +94 71 636 8726 (`https://wa.me/94716368726`)
-- **Emergency Phone:** +94 71 636 8726
+- **Primary Phone / WhatsApp:** +94 75 636 8726 (`https://wa.me/94756368726`)
+- **Emergency Phone:** +94 75 636 8726
 - **Email:** contact@liospawparadise.com
 - **Website:** [https://liospawparadise.com](https://liospawparadise.com)
 - **Primary Service Areas:** Galle, Matara, Ahangama, Weligama, Unawatuna, Mirissa, and Southern Province, Sri Lanka.

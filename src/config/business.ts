@@ -15,12 +15,12 @@ export const business = {
     "Safe, caring, and comfortable dog boarding, housing, and pet care in Ahangama, Southern Sri Lanka — serving dog owners across Galle, Matara, Weligama, and the Southern Province.",
 
   // ---- Contact -------------------------------------------------
-  phoneDisplay: "+94 71 636 8726",
-  phoneDial: "+94716368726", // digits only, used in tel: links
-  whatsappNumber: "94716368726", // no + or spaces, used in wa.me links
+  phoneDisplay: "+94 75 636 8726",
+  phoneDial: "+94756368726", // digits only, used in tel: links
+  whatsappNumber: "94756368726", // no + or spaces, used in wa.me links
   email: "liospawparadise@gmail.com",
-  emergencyPhoneDisplay: "+94 71 636 8726",
-  emergencyPhoneDial: "+94716368726",
+  emergencyPhoneDisplay: "+94 75 636 8726",
+  emergencyPhoneDial: "+94756368726",
 
   // ---- Location --------------------------------------------------
   address: {
@@ -243,7 +243,7 @@ export const business = {
     {
       question: "How do I check availability and arrange a booking?",
       answer:
-        "You can message us directly on WhatsApp at +94 71 636 8726 or send an email to liospawparadise@gmail.com. Because every stay is personal and spaces are limited to ensure individual attention, the owner personally confirms every booking.",
+        "You can message us directly on WhatsApp at +94 75 636 8726 or send an email to liospawparadise@gmail.com. Because every stay is personal and spaces are limited to ensure individual attention, the owner personally confirms every booking.",
     },
     {
       question: "What information should I provide before my dog's stay?",
