@@ -2,9 +2,15 @@ export interface HeroSlideProps {
   image: string;
   index: number;
   isActive?: boolean;
+  alt?: string;
 }
 
-export default function HeroSlide({ image, index, isActive = false }: HeroSlideProps) {
+export default function HeroSlide({
+  image,
+  index,
+  isActive = false,
+  alt = "Dog boarding at Lio's Paw Paradise in Sri Lanka",
+}: HeroSlideProps) {
   return (
     <div
       className={`hero-slide absolute inset-0 transition-opacity duration-[1400ms] ease-out ${
@@ -16,7 +22,7 @@ export default function HeroSlide({ image, index, isActive = false }: HeroSlideP
       <div className="absolute inset-0 overflow-hidden">
         <img
           src={image}
-          alt=""
+          alt={alt}
           className={`hero-img h-full w-full object-cover transition-transform duration-[7200ms] ease-linear ${
             isActive ? "scale-110" : "scale-100"
           }`}

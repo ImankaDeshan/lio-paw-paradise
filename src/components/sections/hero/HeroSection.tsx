@@ -9,13 +9,15 @@ import HeroPagination from "./HeroPagination";
 const slides = [
   {
     image: "/images/Hero/Image1.jpg",
-    eyebrow: "Serendib Paws Retreat",
+    alt: "Happy dog relaxing safely in the lush garden at Lio's Paw Paradise in Ahangama",
+    eyebrow: "Lio's Paw Paradise",
     title: "A Safe Second Home\nFor Your Beloved Dog",
-    subtitle: "Professional dog care while you explore Sri Lanka.",
+    subtitle: "Professional dog boarding and caring pet accommodation in Ahangama, Galle & Matara.",
     cta: true,
   },
   {
     image: "/images/Hero/Image3.jpg",
+    alt: "Wholesome, healthy dog meals prepared fresh daily at Lio's Paw Paradise",
     eyebrow: "Fed With Care",
     title: "Healthy Meals.\nProper Nutrition.\nHappy Dogs.",
     subtitle: "Fresh, home-style meals matched to your dog's routine.",
@@ -23,6 +25,7 @@ const slides = [
   },
   {
     image: "/images/Hero/Image2.jpg",
+    alt: "Dedicated caregiver providing one-on-one attention to a dog in Southern Sri Lanka",
     eyebrow: "One-On-One Care",
     title: "Personal Attention\nEvery Day",
     subtitle: "Familiar caregivers who genuinely enjoy their work.",
@@ -30,6 +33,7 @@ const slides = [
   },
   {
     image: "/images/Hero/Image4.jpg",
+    alt: "Secure enclosed garden grounds for dogs to exercise and relax safely",
     eyebrow: "Enclosed Garden Grounds",
     title: "Safe.\nCalm.\nLoved.",
     subtitle: "Dogs relaxing and playing safely, always supervised.",
@@ -66,7 +70,7 @@ export default function HeroSection() {
     <section
       className="hero-wrapper relative h-[100svh] min-h-[720px] w-full overflow-hidden bg-forest-ink sm:min-h-[640px]"
       aria-roledescription="carousel"
-      aria-label="Serendib Paws Retreat highlights"
+      aria-label="Lio's Paw Paradise highlights"
     >
       {/* Background Track & Slides */}
       <div id="hero-track" className="hero-track absolute inset-0">
@@ -74,6 +78,7 @@ export default function HeroSection() {
           <HeroSlide
             key={i}
             image={slide.image}
+            alt={slide.alt}
             index={i}
             isActive={i === current}
           />

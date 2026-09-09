@@ -21,9 +21,15 @@ export default function HeroContent({
   return (
     <div className={`hero-copy ${isActive ? "block" : "hidden"}`} data-index={index}>
       <p className="eyebrow text-gold">{eyebrow}</p>
-      <h1 className="mt-5 whitespace-pre-line font-display text-[42px] font-normal leading-[1.08] text-cream sm:text-[56px] lg:text-[66px]">
-        {title}
-      </h1>
+      {index === 0 ? (
+        <h1 className="mt-5 whitespace-pre-line font-display text-[42px] font-normal leading-[1.08] text-cream sm:text-[56px] lg:text-[66px]">
+          {title}
+        </h1>
+      ) : (
+        <h2 className="mt-5 whitespace-pre-line font-display text-[42px] font-normal leading-[1.08] text-cream sm:text-[56px] lg:text-[66px]">
+          {title}
+        </h2>
+      )}
       <p className="mt-6 max-w-md text-[15px] leading-relaxed text-cream/75 sm:text-base">
         {subtitle}
       </p>

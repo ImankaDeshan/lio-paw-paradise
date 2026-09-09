@@ -5,14 +5,61 @@ import ContactForm from "./ContactForm";
 import { business } from "@/config/business";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: {
+    absolute: "Contact & Book Dog Boarding | Lio's Paw Paradise Sri Lanka",
+  },
   description:
-    "Get in touch with Serendib Paws Retreat via WhatsApp or email to enquire about dog care during your trip to Sri Lanka.",
+    "Contact Lio's Paw Paradise directly via WhatsApp (+94 71 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
+  alternates: {
+    canonical: "https://liospawparadise.com/contact",
+  },
+  openGraph: {
+    title: "Contact & Book Dog Boarding | Lio's Paw Paradise Sri Lanka",
+    description:
+      "Contact Lio's Paw Paradise directly via WhatsApp (+94 71 636 8726) or email to enquire about dog boarding, housing, and daycare availability in Ahangama, Galle & Matara.",
+    url: "https://liospawparadise.com/contact",
+    siteName: business.name,
+    images: [
+      {
+        url: "/images/Hero/Image1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Lio's Paw Paradise Dog Boarding in Southern Sri Lanka",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Lio's Paw Paradise",
+    url: "https://liospawparadise.com/contact",
+    description:
+      "Contact information for booking dog boarding, housing, and daycare at Lio's Paw Paradise in Ahangama, Southern Sri Lanka.",
+    mainEntity: {
+      "@type": "LocalBusiness",
+      name: business.name,
+      telephone: business.phoneDisplay,
+      email: business.email,
+      url: "https://liospawparadise.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: business.address.line1,
+        addressLocality: business.address.line2,
+        addressRegion: "Southern Province",
+        addressCountry: "LK",
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <section className="bg-forest-ink pb-12 pt-32 text-cream sm:pb-8 sm:pt-38">
         <div className="container-page">
           <p className="eyebrow text-gold">Get In Touch</p>

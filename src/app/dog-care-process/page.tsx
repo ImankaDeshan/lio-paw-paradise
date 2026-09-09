@@ -2,14 +2,52 @@ import type { Metadata } from "next";
 import { business } from "@/config/business";
 
 export const metadata: Metadata = {
-  title: "Our Dog Care Process",
+  title: {
+    absolute: "Our Dog Care & Boarding Process | Lio's Paw Paradise Sri Lanka",
+  },
   description:
-    "A step-by-step look at how Serendib Paws Retreat personally cares for your dog, from first introduction to happy return home.",
+    "A step-by-step look at how Lio's Paw Paradise in Ahangama personally cares for your dog, from first introduction to daily feeding, monitoring, and happy reunion.",
+  alternates: {
+    canonical: "https://liospawparadise.com/dog-care-process",
+  },
+  openGraph: {
+    title: "Our Dog Care & Boarding Process | Lio's Paw Paradise Sri Lanka",
+    description:
+      "A step-by-step look at how Lio's Paw Paradise in Ahangama personally cares for your dog, from first introduction to daily feeding, monitoring, and happy reunion.",
+    url: "https://liospawparadise.com/dog-care-process",
+    siteName: business.name,
+    images: [
+      {
+        url: "/images/Hero/Image5.jpg",
+        width: 800,
+        height: 600,
+        alt: "Caregiver attending to a dog at Lio's Paw Paradise in Sri Lanka",
+      },
+    ],
+  },
 };
 
 export default function DogCareProcessPage() {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Our Dog Boarding & Care Process at Lio's Paw Paradise",
+    description:
+      "A structured 5-step approach to ensuring every dog receives personalized, safe, and loving care during their stay.",
+    step: business.process.map((step) => ({
+      "@type": "HowToStep",
+      position: step.step,
+      name: step.title,
+      text: step.description,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <section className="bg-forest-ink pb-12 pt-32 text-cream sm:pb-8 sm:pt-38">
         <div className="container-page">
           <p className="eyebrow text-gold">Our Process</p>

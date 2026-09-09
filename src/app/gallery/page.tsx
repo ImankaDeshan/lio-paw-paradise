@@ -3,13 +3,47 @@ import GalleryGrid from "@/components/ui/GalleryGrid";
 import { business } from "@/config/business";
 
 export const metadata: Metadata = {
-  title: "Gallery",
-  description: `A look inside ${business.name} — dogs relaxing, eating, playing and being cared for in a tropical Sri Lankan garden home.`,
+  title: {
+    absolute: "Photo Gallery | Lio's Paw Paradise Dog Boarding Sri Lanka",
+  },
+  description:
+    "Explore photos of dogs enjoying safe garden grounds, fresh meals, peaceful rest areas, and loving one-on-one care at Lio's Paw Paradise in Ahangama, Southern Sri Lanka.",
+  alternates: {
+    canonical: "https://liospawparadise.com/gallery",
+  },
+  openGraph: {
+    title: "Photo Gallery | Lio's Paw Paradise Dog Boarding Sri Lanka",
+    description:
+      "Explore photos of dogs enjoying safe garden grounds, fresh meals, peaceful rest areas, and loving one-on-one care at Lio's Paw Paradise in Ahangama, Southern Sri Lanka.",
+    url: "https://liospawparadise.com/gallery",
+    siteName: business.name,
+    images: [
+      {
+        url: "/images/Lio's Paw Paradise-Image-1.jpg",
+        width: 800,
+        height: 600,
+        alt: "Dogs enjoying garden grounds at Lio's Paw Paradise in Sri Lanka",
+      },
+    ],
+  },
 };
 
 export default function GalleryPage() {
+  const gallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Lio's Paw Paradise Photo Gallery",
+    description:
+      "Everyday moments of dogs relaxing, dining, playing, and resting in our safe garden home in Ahangama, Sri Lanka.",
+    url: "https://liospawparadise.com/gallery",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }}
+      />
       <section className="bg-forest-ink pb-12 pt-32 text-cream sm:pb-8 sm:pt-38">
         <div className="container-page">
           <p className="eyebrow text-gold">Gallery</p>

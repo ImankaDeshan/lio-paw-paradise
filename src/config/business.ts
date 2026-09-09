@@ -1,13 +1,9 @@
 /**
  * ============================================================
- *  SERENDIB PAWS RETREAT — BUSINESS CONFIGURATION
+ *  LIO'S PAW PARADISE — BUSINESS CONFIGURATION
  * ============================================================
- *  This is the ONLY file you should need to edit for day-to-day
- *  changes: phone numbers, prices, address, hours, links, etc.
- *  Every page and component pulls its details from here.
- *
- *  After editing, save the file and rebuild the site
- *  (see README.md → "How to run").
+ *  This is the single source of truth for business details:
+ *  phone numbers, address, hours, service areas, and SEO.
  * ============================================================
  */
 
@@ -16,23 +12,38 @@ export const business = {
   shortName: "Lio's Paw Paradise",
   tagline: "A Safe Second Home For Your Beloved Dog",
   descriptionShort:
-    "Premium, personal dog care for travellers exploring Sri Lanka — safe, healthy, and loved while you're away.",
+    "Safe, caring, and comfortable dog boarding, housing, and pet care in Ahangama, Southern Sri Lanka — serving dog owners across Galle, Matara, Weligama, and the Southern Province.",
 
   // ---- Contact -------------------------------------------------
-  phoneDisplay: "+94 75 636 8726",
-  phoneDial: "+94756368726", // digits only, used in tel: links
-  whatsappNumber: "94756368726", // no + or spaces, used in wa.me links
+  phoneDisplay: "+94 71 636 8726",
+  phoneDial: "+94716368726", // digits only, used in tel: links
+  whatsappNumber: "94716368726", // no + or spaces, used in wa.me links
   email: "liospawparadise@gmail.com",
-  emergencyPhoneDisplay: "+94 75 636 8726",
-  emergencyPhoneDial: "+94756368726",
+  emergencyPhoneDisplay: "+94 71 636 8726",
+  emergencyPhoneDial: "+94716368726",
 
   // ---- Location --------------------------------------------------
   address: {
-    line1: "No 75, Wisal Uyana, ",
+    line1: "No. 75, Piyamis,",
     line2: "Dikkumbura, Ahangama",
+    city: "Ahangama",
+    district: "Galle",
+    province: "Southern Province",
     country: "Sri Lanka",
+    formatted: "No. 75, Piyamis, Dikkumbura, Ahangama, Sri Lanka",
     mapsUrl: "https://share.google/F3yoRLOSnUu0eecOm",
   },
+
+  // ---- Primary Service Areas -------------------------------------
+  serviceAreas: [
+    { name: "Ahangama", description: "Our home facility location in Southern Sri Lanka" },
+    { name: "Galle", description: "Primary service target for local dog owners and expats" },
+    { name: "Matara", description: "Primary service target for dog owners and travellers" },
+    { name: "Weligama", description: "Popular surf and travel destination minutes from our facility" },
+    { name: "Unawatuna", description: "Coastal resort hub with easy access to our care" },
+    { name: "Mirissa", description: "Southern travel hotspot welcoming pet owners" },
+    { name: "Southern Province", description: "Comprehensive dog boarding and care across the region" },
+  ],
 
   // ---- Hours -------------------------------------------------------
   hours: [
@@ -43,18 +54,18 @@ export const business = {
 
   // ---- Social ----------------------------------------------------
   social: {
-    instagram: "https://instagram.com/serendibpaws",
-    facebook: "https://facebook.com/serendibpaws",
-    tiktok: "https://tiktok.com/@serendibpaws",
+    instagram: "",
+    facebook: "",
+    tiktok: "",
   },
 
-  // ---- Pricing text (kept as guidance text, not a booking price list) ---
+  // ---- Pricing text (guidance text, personal confirmation) ---
   pricingText:
-    "Daily and weekly care packages available. Every stay is tailored to your dog's routine — message us with your travel dates for a personal quote.",
+    "Daily, weekly, and custom extended stay packages available. Every stay is tailored to your dog's routine — message us with your travel dates for a personal quote.",
 
   // ---- WhatsApp default inquiry message ---------------------------
   whatsappDefaultMessage:
-    "Hello Serendib Paws! I'd like to enquire about dog care for my upcoming trip to Sri Lanka.",
+    "Hello Lio's Paw Paradise! I'd like to enquire about dog care and boarding in Southern Sri Lanka.",
 
   // ---- Services (used across Home + Services page) ----------------
   services: [
@@ -207,14 +218,61 @@ export const business = {
     },
   ],
 
+  // ---- FAQs (Used on Home, Services & FAQ Schema) -------------------
+  faqs: [
+    {
+      question: "Is my dog safe and supervised at Lio's Paw Paradise?",
+      answer:
+        "Yes, absolutely. Our facility in Ahangama is fully enclosed with secure, gated garden grounds and shaded resting zones. Every dog receives dedicated, hands-on attention and quiet supervision in a calm, low-stress environment.",
+    },
+    {
+      question: "Can I leave my dog while travelling through Southern Sri Lanka?",
+      answer:
+        "Yes! Many of our guests are tourists, expats, and foreign travelers exploring Sri Lanka. Whether you are taking day excursions to Galle Fort, surfing in Weligama, visiting Mirissa, or traveling around the island, we provide a trustworthy, loving home for your dog.",
+    },
+    {
+      question: "Do you offer both short-term and long-term dog boarding?",
+      answer:
+        "Yes. We accommodate short-term stays (daycare, single overnights, weekend getaways) as well as multi-week and long-term boarding for owners on extended travel or work assignments.",
+    },
+    {
+      question: "Which locations and service areas do you cover?",
+      answer:
+        "Our physical home facility is located in Ahangama. We proudly serve dog owners, tourists, and expats across Galle, Matara, Weligama, Unawatuna, Mirissa, and the broader Southern Province of Sri Lanka.",
+    },
+    {
+      question: "How do I check availability and arrange a booking?",
+      answer:
+        "You can message us directly on WhatsApp at +94 71 636 8726 or send an email to liospawparadise@gmail.com. Because every stay is personal and spaces are limited to ensure individual attention, the owner personally confirms every booking.",
+    },
+    {
+      question: "What information should I provide before my dog's stay?",
+      answer:
+        "Please let us know your dog's breed, age, personality, daily feeding routine, allergies, medication requirements, and your expected travel dates. This allows us to replicate their home routine smoothly.",
+    },
+    {
+      question: "How are meals, feeding, and medications handled?",
+      answer:
+        "We strictly follow your dog's regular feeding schedule, portion sizes, and ingredient preferences. Fresh home-style meals are prepared daily, clean filtered water is always available, and veterinary medications are administered with strict adherence to timing and dosage.",
+    },
+    {
+      question: "Will I receive updates while I am away from my dog?",
+      answer:
+        "Yes! We regularly send photo, video, and message updates via WhatsApp throughout your dog's stay, giving you complete peace of mind while you explore Sri Lanka.",
+    },
+  ],
+
   // ---- SEO defaults --------------------------------------------------
   seo: {
-    defaultTitleSuffix: " | Serendib Paws Retreat — Sri Lanka",
+    siteUrl: "https://liospawparadise.com",
+    defaultTitleSuffix: " | Lio's Paw Paradise — Dog Boarding Sri Lanka",
+    defaultTitle: "Lio's Paw Paradise | Dog Boarding, Housing & Care in Ahangama, Galle & Matara",
     defaultDescription:
-      "Premium dog care in Sri Lanka for travellers. A safe, loving, professionally supervised home for your dog while you explore — in Kandy, Central Province.",
+      "Safe, caring, and comfortable dog boarding, housing, and pet care in Ahangama, Southern Sri Lanka. Serving dog owners and tourists across Galle, Matara, Weligama, Unawatuna, and Mirissa.",
     keywords:
-      "dog care Sri Lanka, dog boarding Kandy, pet care for tourists Sri Lanka, dog sitting Sri Lanka, luxury dog boarding",
+      "dog boarding Sri Lanka, dog boarding Galle, dog boarding Matara, dog boarding Southern Province Sri Lanka, dog boarding Ahangama, dog boarding Weligama, dog boarding Unawatuna, dog boarding Mirissa, dog care Galle, dog care Matara, dog care Southern Sri Lanka, pet boarding Galle, pet boarding Matara, pet care Galle, pet care Matara, dog housing Sri Lanka, dog accommodation Sri Lanka, dog hotel Sri Lanka, dog daycare Galle, dog daycare Matara, dog boarding in Sri Lanka for tourists",
   },
 } as const;
 
 export type Business = typeof business;
+

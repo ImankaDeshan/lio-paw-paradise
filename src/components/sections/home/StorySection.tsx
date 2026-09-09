@@ -18,15 +18,15 @@ export default function StorySection() {
           <div className="overflow-hidden rounded-[28px] border border-forest/10 shadow-card">
             <img
               src="/images/Hero/Image6.jpg"
-              alt="A dog resting comfortably in a shaded garden area"
+              alt="Dog resting comfortably in the shaded garden at Lio's Paw Paradise in Ahangama, Sri Lanka"
               className="aspect-[4/5] max-h-[480px] w-full object-cover"
               loading="lazy"
             />
           </div>
           <div className="glass-card absolute -bottom-6 -right-4 hidden w-48 border-forest/10 bg-cream/90 p-4 shadow-soft sm:block">
-            <p className="font-display text-2xl text-forest">5★</p>
+            <p className="font-display text-xl text-forest">Safe Stays</p>
             <p className="mt-1 text-[11px] leading-snug text-forest-ink/60">
-              Trusted by travelling dog owners across Sri Lanka
+              Trusted dog care & boarding in Southern Sri Lanka
             </p>
           </div>
         </div>
@@ -37,8 +37,9 @@ export default function StorySection() {
             More Than Dog Boarding.<br />A Comfortable Home Away From Home.
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-forest-ink/65">
-            Travelling through Sri Lanka shouldn&apos;t mean leaving your dog somewhere uncertain. At {business.shortName}, every
-            stay is treated as a real routine, not a cage and a checklist — so you can explore freely, knowing your dog is:
+            Travelling or living in Southern Sri Lanka shouldn&apos;t mean worrying about your dog&apos;s safety.
+            Located in Ahangama and welcoming pet owners from Galle, Matara, Weligama, Unawatuna, and Mirissa, {business.shortName} treats
+            every stay as a genuine routine — not a cage and a checklist — so you can enjoy your time with peace of mind knowing your dog is:
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {highlights.map((item, i) => (

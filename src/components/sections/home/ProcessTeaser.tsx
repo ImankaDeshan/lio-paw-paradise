@@ -38,7 +38,7 @@ export default function ProcessTeaser() {
         >
           <img
             src="/images/Hero/Image5.jpg"
-            alt="A caregiver gently attending to a dog"
+            alt="Caregiver gently attending to a dog during their stay at Lio's Paw Paradise in Sri Lanka"
             className="aspect-[4/5] max-h-[480px] w-full object-cover"
             loading="lazy"
           />

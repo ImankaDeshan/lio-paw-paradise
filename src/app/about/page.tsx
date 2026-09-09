@@ -2,9 +2,29 @@ import type { Metadata } from "next";
 import { business } from "@/config/business";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: {
+    absolute: "About Us | Dog Boarding & Pet Care in Ahangama, Galle & Matara",
+  },
   description:
-    "Why Serendib Paws Retreat exists — a Sri Lankan dog care home built on love for animals, responsible care and helping travellers explore freely.",
+    "Learn why Lio's Paw Paradise exists — dedicated dog boarding, housing, and pet care in Ahangama, Southern Sri Lanka, built on genuine love and trusted care.",
+  alternates: {
+    canonical: "https://liospawparadise.com/about",
+  },
+  openGraph: {
+    title: "About Us | Dog Boarding & Pet Care in Ahangama, Galle & Matara",
+    description:
+      "Learn why Lio's Paw Paradise exists — dedicated dog boarding, housing, and pet care in Ahangama, Southern Sri Lanka, built on genuine love and trusted care.",
+    url: "https://liospawparadise.com/about",
+    siteName: business.name,
+    images: [
+      {
+        url: "/images/About/Logo.jpg",
+        width: 800,
+        height: 600,
+        alt: "About Lio's Paw Paradise Dog Boarding in Ahangama, Sri Lanka",
+      },
+    ],
+  },
 };
 
 const pillars = [
@@ -18,11 +38,11 @@ const pillars = [
   },
   {
     title: "Safe Environment",
-    desc: "A secure, shaded, enclosed garden home, built specifically with a dog's comfort in mind.",
+    desc: "A secure, shaded, enclosed garden home in Ahangama, built specifically with a dog's comfort and safety in mind.",
   },
   {
-    title: "Helping Tourists Travel Peacefully",
-    desc: "So visitors can experience Sri Lanka fully, without a moment of worry about who's looking after their dog.",
+    title: "Helping Tourists & Locals Alike",
+    desc: "Giving pet owners across Galle, Matara, and Southern Sri Lanka total confidence while travelling or away from home.",
   },
 ];
 
@@ -43,7 +63,7 @@ export default function AboutPage() {
           <div className="reveal mx-auto w-full max-w-md overflow-hidden rounded-[28px] border border-forest/10 shadow-card lg:max-w-[400px]">
             <img
               src="/images/About/Logo.jpg"
-              alt="A caregiver spending time with a dog"
+              alt="Caregiver spending time with a dog at Lio's Paw Paradise in Ahangama, Sri Lanka"
               className="aspect-[4/5] max-h-[450px] w-full object-cover"
               loading="lazy"
             />
@@ -54,13 +74,13 @@ export default function AboutPage() {
               A Home Built On Trust, Not Just Space
             </h2>
             <p className="mt-6 text-[15px] leading-relaxed text-forest-ink/65">
-              Sri Lanka draws travellers who bring their dogs along for the journey — but finding somewhere genuinely
-              trustworthy to leave them, even for a few days, is hard. {business.shortName} exists to close that gap: a
+              Sri Lanka draws travellers and expats who bring their dogs along for the journey — but finding somewhere genuinely
+              trustworthy to leave them, even for a few days, is hard. Located in Ahangama and serving dog owners across Galle, Matara, Weligama, and Unawatuna, {business.shortName} exists to close that gap: a
               real home, run by people who care, where your dog&apos;s routine, health and happiness come first.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-forest-ink/65">
-              We&apos;re not a kennel and we&apos;re not a hotel chain. We&apos;re a small, dedicated team who believe every dog deserves
-              the same warmth and attention they get at home — so you can enjoy Sri Lanka the way you came here to.
+              We&apos;re not a kennel and we&apos;re not an impersonal commercial facility. We&apos;re a dedicated team who believe every dog deserves
+              the same warmth and attention they get at home — so you can explore Southern Sri Lanka with complete peace of mind.
             </p>
           </div>
         </div>

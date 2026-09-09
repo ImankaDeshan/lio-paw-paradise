@@ -1,9 +1,30 @@
 import type { Metadata } from "next";
+import { business } from "@/config/business";
 
 export const metadata: Metadata = {
-  title: "Food & Health",
+  title: {
+    absolute: "Dog Food, Nutrition & Health Standards | Lio's Paw Paradise",
+  },
   description:
-    "Veterinary-style nutrition and health care standards for every dog staying at Serendib Paws Retreat in Sri Lanka.",
+    "Veterinary-style nutrition, fresh home-cooked meals, and quiet daily health observation for every dog staying at Lio's Paw Paradise in Ahangama, Southern Sri Lanka.",
+  alternates: {
+    canonical: "https://liospawparadise.com/food-and-health",
+  },
+  openGraph: {
+    title: "Dog Food, Nutrition & Health Standards | Lio's Paw Paradise",
+    description:
+      "Veterinary-style nutrition, fresh home-cooked meals, and quiet daily health observation for every dog staying at Lio's Paw Paradise in Ahangama, Southern Sri Lanka.",
+    url: "https://liospawparadise.com/food-and-health",
+    siteName: business.name,
+    images: [
+      {
+        url: "/images/Foods/Foods.jpg",
+        width: 800,
+        height: 600,
+        alt: "Fresh dog nutrition and meals at Lio's Paw Paradise in Sri Lanka",
+      },
+    ],
+  },
 };
 
 const nutrition = [
@@ -42,7 +63,7 @@ export default function FoodAndHealthPage() {
           <div className="reveal overflow-hidden rounded-[32px] border border-forest/10 shadow-card">
             <img
               src="/images/Foods/Foods.jpg"
-              alt="A dog enjoying a freshly prepared healthy meal"
+              alt="Fresh nutritious home-style meals prepared for dogs at Lio's Paw Paradise"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />
@@ -91,7 +112,7 @@ export default function FoodAndHealthPage() {
             <div className="reveal order-1 overflow-hidden rounded-[32px] border border-forest/10 shadow-card lg:order-2">
               <img
                 src="/images/Foods/Care.jpg"
-                alt="A dog resting comfortably while being monitored"
+                alt="A dog resting comfortably under daily health observation at Lio's Paw Paradise"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />
