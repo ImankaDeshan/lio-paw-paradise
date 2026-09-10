@@ -47,7 +47,13 @@ export default function Navbar() {
           }`}
         >
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/images/Logo.png" alt={business.name} width={70} height={34} className="shrink-0" />
+            <img
+              src={isScrolled ? "/images/Logo.png" : "/images/LogoLight.png"}
+              alt={business.name}
+              width={70}
+              height={34}
+              className="shrink-0"
+            />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
