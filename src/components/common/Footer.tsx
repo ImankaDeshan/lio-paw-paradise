@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <img src="/images/logo-Light.png" alt="Lio's Paw Paradise Logo" width={36} height={36} />
+              <img src="/images/LogoLight.png" alt="Lio's Paw Paradise Logo" width={36} height={36} />
               <span className="font-display text-lg">{business.name}</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
