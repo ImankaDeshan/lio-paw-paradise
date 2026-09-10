@@ -196,7 +196,7 @@ h6 {
 
 .btn-outline-light:hover {
   background-color: var(--color-cream);
-  color: var(--color-forest-ink);
+  color: var(--color-forest);
   border-color: var(--color-cream);
   transform: translateY(-1px);
 }
