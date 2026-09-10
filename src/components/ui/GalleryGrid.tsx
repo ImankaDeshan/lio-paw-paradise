@@ -5,72 +5,112 @@ import { LuX, LuZoomIn, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 export interface GalleryItem {
   src: string;
-  caption: string;
-  category: "all" | "garden" | "care" | "rest";
+
+  category: "all" | "Outdoor" | "With Owners" | "care" | "rest";
   tall?: boolean;
 }
 
 const defaultImages: GalleryItem[] = [
   {
     src: "/images/Lio's Paw Paradise-Image-1.jpg",
-    caption: "Resting comfortably in the shaded garden",
-    category: "rest",
+
+    category: "With Owners",
     tall: true,
   },
   {
     src: "/images/Lio's Paw Paradise-Image-2.jpg",
-    caption: "Afternoon outdoor play and exploration",
-    category: "garden",
-  },
-  {
-    src: "/images/Lio's Paw Paradise-Image-3.jpg",
-    caption: "Wholesome meal prepared fresh daily",
+
     category: "care",
   },
   {
+    src: "/images/Lio's Paw Paradise-Image-3.jpg",
+
+    category: "With Owners",
+  },
+  {
     src: "/images/Lio's Paw Paradise-Image-4.jpg",
-    caption: "Calm, clean rest area with natural breeze",
-    category: "rest",
+
+    category: "care",
     tall: true,
   },
   {
     src: "/images/Lio's Paw Paradise-Image-5.jpg",
-    caption: "Following each dog's familiar daily routine",
-    category: "care",
+
+    category: "With Owners",
   },
   {
     src: "/images/Lio's Paw Paradise-Image-6.jpg",
-    caption: "Loving, one-on-one caregiver attention",
+
     category: "care",
   },
   {
     src: "/images/Lio's Paw Paradise-Image-7.jpg",
-    caption: "Free and secure movement in open green space",
-    category: "garden",
+
+    category: "Outdoor",
   },
   {
     src: "/images/Lio's Paw Paradise-Image-8.jpg",
-    caption: "Settling in peacefully for an afternoon snooze",
-    category: "rest",
+
+    category: "care",
     tall: true,
   },
   {
     src: "/images/Lio's Paw Paradise-Image-9.jpg",
-    caption: "Lush tropical garden surroundings",
-    category: "garden",
+
+    category: "Outdoor",
   },
   {
     src: "/images/Lio's Paw Paradise-Image-10.jpg",
-    caption: "Gentle companionship and dedicated support",
-    category: "care",
+
+    category: "With Owners",
   },
+  {
+    src: "/images/Lio's Paw Paradise-Image-11.jpeg",
+
+    category: "rest",
+  },
+
+  {
+    src: "/images/Lio's Paw Paradise-Image-12.jpeg",
+
+    category: "rest",
+  },
+
+  {
+    src: "/images/Lio's Paw Paradise-Image-13.jpeg",
+
+    category: "With Owners",
+  },
+
+  {
+    src: "/images/Lio's Paw Paradise-Image-14.jpeg",
+
+    category: "Outdoor",
+  },
+
+  {
+    src: "/images/Lio's Paw Paradise-Image-15.jpeg",
+
+    category: "Outdoor",
+  },
+
+  {
+    src: "/images/Lio's Paw Paradise-Image-16.jpeg",
+
+    category: "Outdoor",
+  },
+
+
+
+
 ];
 
 const categories = [
   { key: "all", label: "All Moments" },
   { key: "rest", label: "Rest & Relax" },
-  { key: "garden", label: "Garden & Play" },
+  { key: "Outdoor", label: "Outdoor & Play" },
   { key: "care", label: "Daily Care" },
+  { key: "With Owners", label: "With Owners" },
 ] as const;
 
 export interface GalleryGridProps {
@@ -133,11 +173,10 @@ export default function GalleryGrid({ images = defaultImages }: GalleryGridProps
                 setActiveCategory(cat.key);
                 setSelectedIndex(null);
               }}
-              className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all duration-300 ${
-                isActive
-                  ? "border border-gold bg-forest text-gold shadow-sm"
-                  : "border border-forest/15 bg-cream text-forest-ink/70 hover:border-gold/60 hover:text-forest-ink"
-              }`}
+              className={`rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all duration-300 ${isActive
+                ? "border border-gold bg-forest text-gold shadow-sm"
+                : "border border-forest/15 bg-cream text-forest-ink/70 hover:border-gold/60 hover:text-forest-ink"
+                }`}
             >
               {cat.label}
             </button>
@@ -152,31 +191,27 @@ export default function GalleryGrid({ images = defaultImages }: GalleryGridProps
             key={img.src}
             type="button"
             onClick={() => setSelectedIndex(i)}
-            aria-label={`View photo: ${img.caption}`}
+            aria-label={`View photo ${i + 1} - ${img.category}`}
             className="group relative mb-4 block w-full overflow-hidden rounded-[18px] border border-forest/10 bg-forest/5 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-card focus-visible:outline-2 focus-visible:outline-gold"
           >
             {/* Image */}
             <img
               src={img.src}
-              alt={img.caption}
+              alt={`Lio's Paw Paradise - ${img.category} photo ${i + 1}`}
               loading="lazy"
-              className={`w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 ${
-                img.tall ? "aspect-[3/4]" : "aspect-[4/3]"
-              }`}
+              className={`w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 ${img.tall ? "aspect-[3/4]" : "aspect-[4/3]"
+                }`}
             />
 
             {/* Modern Glassmorphic Hover Overlay */}
-            <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-forest-ink/85 via-forest-ink/20 to-transparent p-3.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-forest-ink/80 via-transparent to-transparent p-3.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="self-end rounded-full border border-white/20 bg-forest-ink/60 p-2 text-gold backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
                 <LuZoomIn size={15} />
               </span>
               <div>
-                <span className="inline-block rounded-md bg-gold/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-gold backdrop-blur-sm">
+                <span className="inline-block rounded-md border border-white/10 bg-forest-ink/75 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold backdrop-blur-md">
                   {img.category}
                 </span>
-                <p className="mt-1 text-xs font-medium leading-snug text-cream">
-                  {img.caption}
-                </p>
               </div>
             </div>
           </button>
@@ -233,19 +268,16 @@ export default function GalleryGrid({ images = defaultImages }: GalleryGridProps
           </button>
 
           {/* Centered Image Card */}
-          <figure
-            className="relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-cream/15 bg-forest-ink/60 shadow-soft"
+          <div
+            className="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-cream/15 bg-forest-ink/60 shadow-soft"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={activeImage.src}
-              alt={activeImage.caption}
-              className="max-h-[72vh] w-full rounded-2xl object-contain"
+              alt={`Lio's Paw Paradise photo ${selectedIndex! + 1}`}
+              className="max-h-[82vh] w-full rounded-2xl object-contain"
             />
-            <figcaption className="border-t border-cream/10 bg-forest-ink/80 p-3.5 text-center text-xs font-medium text-cream/80 backdrop-blur-sm sm:text-sm">
-              {activeImage.caption}
-            </figcaption>
-          </figure>
+          </div>
         </div>
       )}
     </>
